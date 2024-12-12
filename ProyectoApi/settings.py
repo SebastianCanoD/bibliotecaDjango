@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['minombredeapp.azurewebsites.net']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://minombredeapp.azurewebsites.net',
+]
+
 # Base URL to serve media files  
 MEDIA_URL = '/media/'  
 # Path where media is stored  
