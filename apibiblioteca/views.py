@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout
 from apibiblioteca.models import Autor, Categoria, Libro
 from apibiblioteca.serializers import AutorSerializer, CategoriaSerializer, LibroSerializer, UserSerializer
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 # ViewSet para el modelo Autor
 class AutorViewSet(viewsets.ModelViewSet):
@@ -75,7 +77,11 @@ class LoginView(views.APIView):
             {'message': 'Inicio de sesión exitoso.', 'token': token.key},
             status=status.HTTP_200_OK
         )
-
+@csrf_exempt
+def mi_vista_sin_csrf(request):
+    if request.method == 'POST':
+        return HttpResponse("POST recibido sin protección CSRF")
+    return HttpResponse("Usa un POST")
 # Vista para manejar el cierre de sesión
 class LogoutView(views.APIView):
     """
