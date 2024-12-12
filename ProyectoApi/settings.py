@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)b5a+#(k8_wc*f7m!aa3k2d(36833%f_m+h*vl6-gv#(rdy)&_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://minombredeapp.azurewebsites.net']
 
 # Base URL to serve media files  
 MEDIA_URL = '/media/'  
@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'ProyectoApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'miservidormysql.mysql.database.azure.com',  
-        'PORT': '3306',  
-        'USER': 'sebas',  
-        'PASSWORD': '1123',  
-        'NAME': 'mibasededatos',
+        'HOST': 'sebastianCano.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+        'USER': 'sebastianCano',
+        'PASSWORD': 'caletillad1',
+        'NAME': 'sebastianCano$default',
     }
 }
 
