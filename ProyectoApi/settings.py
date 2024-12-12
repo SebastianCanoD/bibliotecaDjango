@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'ProyectoApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
+        'HOST': '192.168.0.8',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '1123',
