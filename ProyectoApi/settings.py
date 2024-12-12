@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'ProyectoApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '192.168.0.8',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '1123',
-        'NAME': 'biblioteca_db',
+        'HOST': 'miservidormysql.mysql.database.azure.com',  
+        'PORT': '3306',  
+        'USER': 'sebas',  
+        'PASSWORD': '1123',  
+        'NAME': 'mibasededatos',
     }
 }
 
